@@ -38,6 +38,7 @@ ol {
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: #d9d9d9;
+  background-color: #d9d9d9;
 }
 
 .visually-hidden {
@@ -50,16 +51,18 @@ ol {
   white-space: nowrap;
 }
 
-.page {
-  display: grid;
-  place-items: center;
+.page { /*  всё идеально по макету  */    /* забыл запушить */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
 
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: "Fira Sans Condensed", Arial, sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
 }
@@ -72,11 +75,9 @@ ol {
 }
 
 .result__video-container {
-  /* outline: 2px solid saddlebrown; */
   width: 711px;
   height: 386px;
-
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
 .result__video {
@@ -89,29 +90,25 @@ ol {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-
-  margin-bottom: 25px;
 }
 
 .content__details {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-
-  margin-bottom: 25px;
-  
-  width: 100%;
+  gap: 26px;
+  width: 399px;
+  height: 534px;
 }
 
 .content__list-container {
   display: flex;
-
   flex-direction: column;
   gap: 30px;
 
   height: 298px;
   overflow-y: auto;
-  width: 399px;
+  width: 100%;
 }
 
 .content__list {
@@ -123,17 +120,14 @@ ol {
 .content__video-card {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-}
 
-.content__video-card-description-container {
-  flex-grow: 1;
-  min-width: 0;
+  align-items: flex-start;
+  gap: 10px;
 }
 
 .content__video-card-thumbnail {
   flex-shrink: 0;
-  
+
   min-width: 194px;
   height: 103px;
   object-fit: cover;
@@ -141,7 +135,7 @@ ol {
 }
 
 .search-form__fieldset-title {
-  font-family: "Fira Sans Condensed", Arial, sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 400;
   margin-bottom: 5px;
@@ -149,13 +143,11 @@ ol {
 }
 
 .title {
-  outline: 2px solid saddlebrown;
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 75px;
   font-weight: 700;
   text-transform: uppercase;
   line-height: 94%;
-  line-height: 1.15;
   color: #fff;
 }
 
@@ -163,14 +155,13 @@ ol {
   color: #545050;
 }
 
-.content__card-link {
-  display: block;
-  text-decoration: none;
-  color: #fff;
+.content__video-card-description-container {
+  flex-grow: 1;
+  min-width: 0;
 }
 
 .content__video-card-title {
-  font-family: "Oswald", Arial, sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 30px;
   text-transform: uppercase;
@@ -178,20 +169,17 @@ ol {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  max-width: 192px; 
+  max-width: 192px;
+
+  width: 100%;
 }
 
 .content__video-card-description {
-  
-  font-family: "Fira Sans Condensed", Arial, sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 16.2px;
 
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
   overflow: hidden;
 }
 
@@ -215,7 +203,7 @@ ol {
 
 /* стили для поиска */
 .search-form__textfield {
-  font-family: "Fira Sans Condensed", Arial, sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   color: #fff;
 
@@ -283,7 +271,7 @@ ol {
   background-color: transparent;
   border: 1px solid #fff;
   color: #fff;
-  font-family: "Fira Sans Condensed", Arial, sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
@@ -303,7 +291,8 @@ ol {
 
 .more-button {
   height: 34px;
-  width: 100%;
+  width: calc(100% - 4px);
+  margin: 0 2px 2px;
 }
 
 .button:hover {
@@ -324,6 +313,12 @@ ol {
 }
 
 /* стили ссылки-карточки */
+.content__card-link {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+
 .content__card-link_current {
   background-color: #545050;
 }
@@ -341,14 +336,14 @@ ol {
 }
 
 .content__list-item {
-  padding: 0px 3px;
+  padding: 0 3px;
 }
 
 .content__card-link:hover .content__video-card-title,
 .content__card-link:hover .content__video-card-description {
   text-decoration: underline;
   text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
+  text-underline-offset: 1px;
 }
 
 .result__video-container,
