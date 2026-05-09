@@ -98,7 +98,7 @@ ol {
   flex-direction: column;
   gap: 26px;
   width: 399px;
-  height: 534px;
+  min-height: 534px;
 }
 
 .content__list-container {
@@ -180,7 +180,11 @@ ol {
   font-weight: 400;
   line-height: 16.2px;
 
-  overflow: hidden;
+ display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 3;
+line-clamp: 3;
+overflow: hidden; 
 }
 
 .search-form__fieldset {
